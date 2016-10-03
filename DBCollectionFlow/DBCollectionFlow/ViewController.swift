@@ -12,19 +12,23 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var dataFlow: DBTableViewDataFlow?
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        self.dataFlow = DBTableViewDataFlow(target: self)
-    }
+    private var _dataFlow: DBTableViewDataFlow?
+    private var _objects:Array<DBInteractionObject> = Array()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationItem.title = "Table View"
+        
+        weak var weakSelf = self
+        
+        let contentManager = DBContentManager()
+        contentManager.loadItemsWithBlock { (items: Array<DBContentManager.Item>) in
+            weakSelf?.db_createInteractionObjects(items: items)
+        }
+        
+        _dataFlow = DBTableViewDataFlow(target: self, data: _objects)
         
         self.db_configureUI()
     }
@@ -40,8 +44,25 @@ class ViewController: UIViewController {
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
-        self.tableView.dataSource = self.dataFlow
-        self.tableView.delegate = self.dataFlow
+        self.tableView.dataSource = _dataFlow
+        self.tableView.delegate = _dataFlow
+    }
+    
+    private func db_createInteractionObjects(items: Array<DBContentManager.Item>) {
+        for item:DBContentManager.Item in items {
+            
+            switch item.itemType {
+            case .Text:
+                if let itemText = item.itemText {
+                    _objects.append(DBInteractionObjectText.init(text: itemText))
+                }
+                break
+                
+            case .Image:
+                
+                break
+            }
+        }
     }
 }
 

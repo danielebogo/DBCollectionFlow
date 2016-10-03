@@ -12,23 +12,21 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
     
     private let target: UIViewController
     
-    var items: [String]?
+    var items: Array<DBInteractionObject>?
     
-    init(target:UIViewController) {
+    init(target:UIViewController, data:Array<DBInteractionObject>) {
         self.target = target
         
         super.init()
         
-        self.db_configureDataSource()
+        self.db_configureDataSource(data)
     }
     
     
 // MARK: Private methods
     
-    func db_configureDataSource() {
-        self.items = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac justo eu turpis maximus sollicitudin eget quis massa. Sed ac convallis enim. In ac turpis non lectus ullamcorper efficitur.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac justo eu turpis maximus sollicitudin eget quis massa.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."]
+    private func db_configureDataSource(_ data:Array<DBInteractionObject>) {
+        self.items = data
     }
     
     
@@ -39,8 +37,15 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: DBTableViewTextCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewTextCell.db_cellIdentifier(), for: indexPath) as! DBTableViewTextCell
-        cell.setCellText(self.items![indexPath.row])
-        return cell
+        let object = self.items![indexPath.row] as! DBInteractionObjectProtocol
+        return object.tableView(tableView, cellForRowAt: indexPath)
+    }
+    
+    
+// MARK: UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let object = self.items![indexPath.row] as! DBInteractionObjectProtocol
+        return object.cellSise()
     }
 }
