@@ -1,16 +1,16 @@
 //
-//  DBTableViewTextCell.swift
+//  DBTableViewImageCell.swift
 //  DBCollectionFlow
 //
-//  Created by Daniele Bogo on 30/09/2016.
+//  Created by Daniele Bogo on 04/10/2016.
 //  Copyright © 2016 Daniele Bogo. All rights reserved.
 //
 
 import UIKit
 
-class DBTableViewTextCell: UITableViewCell {
+class DBTableViewImageCell: UITableViewCell {
 
-    @IBOutlet weak var cellTextLabel: UILabel!
+    @IBOutlet weak private var cellImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,9 +18,12 @@ class DBTableViewTextCell: UITableViewCell {
         
         self.db_buildUI()
     }
-
-    public func setCellText(_ text:String) {
-        self.cellTextLabel.text = text
+    
+    
+//MARK: Public methods
+    
+    public func setCellImage(_ image:UIImage) {
+        self.cellImageView.image = image
     }
     
     
@@ -29,4 +32,5 @@ class DBTableViewTextCell: UITableViewCell {
     private func db_buildUI() {
         self.selectionStyle = .none
     }
+
 }

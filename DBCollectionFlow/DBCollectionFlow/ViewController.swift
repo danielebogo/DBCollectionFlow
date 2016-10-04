@@ -37,9 +37,11 @@ class ViewController: UIViewController {
 // MARK: Private methods
     
     private func db_configureUI() {
-        let nib = UINib(nibName:"DBTableViewTextCell", bundle: nil)
+        let textCellNib = UINib(nibName:"DBTableViewTextCell", bundle: nil)
+        let imageCellNib = UINib(nibName:"DBTableViewImageCell", bundle: nil)
 
-        self.tableView.register(nib, forCellReuseIdentifier: DBTableViewTextCell.db_cellIdentifier())
+        self.tableView.register(textCellNib, forCellReuseIdentifier: DBTableViewTextCell.db_cellIdentifier())
+        self.tableView.register(imageCellNib, forCellReuseIdentifier: DBTableViewImageCell.db_cellIdentifier())
         
         self.tableView.estimatedRowHeight = 44.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -59,6 +61,9 @@ class ViewController: UIViewController {
                 break
                 
             case .Image:
+                if let itemImageName = item.itemImage {
+                    _objects.append(DBInteractionObjectImage.init(imageName: itemImageName))
+                }
                 
                 break
             }

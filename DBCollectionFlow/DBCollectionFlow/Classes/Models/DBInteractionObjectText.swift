@@ -11,7 +11,7 @@ import UIKit
 
 class DBInteractionObjectText: DBInteractionObject, DBInteractionObjectProtocol {
     
-    let objectText:String
+    private let objectText:String
     
     init(text:String) {
         objectText = text
@@ -20,7 +20,7 @@ class DBInteractionObjectText: DBInteractionObject, DBInteractionObjectProtocol 
     
 //MARK: DBInteractionObjectProtocol
     
-    func cellSise() -> CGFloat {
+    func cellSiseWithTableView(_ tableView: UITableView) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
@@ -28,5 +28,9 @@ class DBInteractionObjectText: DBInteractionObject, DBInteractionObjectProtocol 
         let cell: DBTableViewTextCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewTextCell.db_cellIdentifier(), for: indexPath) as! DBTableViewTextCell
         cell.cellTextLabel.text = self.objectText
         return cell
+    }
+    
+    func target(_ target: Any, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
