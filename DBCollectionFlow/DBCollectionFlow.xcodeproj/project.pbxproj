@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F16A3441DA3E08200956158 /* DBTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3431DA3E08200956158 /* DBTableView.swift */; };
+		9F16A3481DA3E47A00956158 /* DBInteractionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */; };
+		9F16A3491DA3E47A00956158 /* DBInteractionObjectImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */; };
+		9F16A34A1DA3E47A00956158 /* DBInteractionObjectText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3471DA3E47A00956158 /* DBInteractionObjectText.swift */; };
 		9F18ABD81D9EA7F300364BD8 /* DBTableViewDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABD71D9EA7F300364BD8 /* DBTableViewDataFlow.swift */; };
 		9F18ABDE1D9EB87B00364BD8 /* DBTableViewTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABDC1D9EB87B00364BD8 /* DBTableViewTextCell.swift */; };
 		9F18ABDF1D9EB87B00364BD8 /* DBTableViewTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */; };
 		9F18ABE21D9EB94600364BD8 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */; };
-		9FB1F6481DA3DA55000C9058 /* DBInteractionObjectImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F6471DA3DA55000C9058 /* DBInteractionObjectImage.swift */; };
 		9FB1F64B1DA3DA8A000C9058 /* DBTableViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F6491DA3DA8A000C9058 /* DBTableViewImageCell.swift */; };
 		9FB1F64C1DA3DA8A000C9058 /* DBTableViewImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1F64A1DA3DA8A000C9058 /* DBTableViewImageCell.xib */; };
 		9FDA8F441DA287C80086908D /* DBContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA8F431DA287C80086908D /* DBContentManager.swift */; };
 		9FDA8F461DA28E8B0086908D /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA8F451DA28E8B0086908D /* items.json */; };
-		9FDA8F491DA2A7890086908D /* DBInteractionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA8F481DA2A7890086908D /* DBInteractionObject.swift */; };
-		9FDA8F4B1DA2AA300086908D /* DBInteractionObjectText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA8F4A1DA2AA300086908D /* DBInteractionObjectText.swift */; };
 		9FFF92D01D9E9DCB005E21F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF92CF1D9E9DCB005E21F5 /* AppDelegate.swift */; };
 		9FFF92D21D9E9DCB005E21F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF92D11D9E9DCB005E21F5 /* ViewController.swift */; };
 		9FFF92D51D9E9DCB005E21F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF92D31D9E9DCB005E21F5 /* Main.storyboard */; };
@@ -26,17 +27,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F16A3431DA3E08200956158 /* DBTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableView.swift; path = Classes/TableView/DBTableView.swift; sourceTree = "<group>"; };
+		9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObject.swift; path = "Classes/Cell Controllers/DBInteractionObject.swift"; sourceTree = "<group>"; };
+		9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObjectImage.swift; path = "Classes/Cell Controllers/DBInteractionObjectImage.swift"; sourceTree = "<group>"; };
+		9F16A3471DA3E47A00956158 /* DBInteractionObjectText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObjectText.swift; path = "Classes/Cell Controllers/DBInteractionObjectText.swift"; sourceTree = "<group>"; };
 		9F18ABD71D9EA7F300364BD8 /* DBTableViewDataFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewDataFlow.swift; path = Classes/TableView/DataSource/DBTableViewDataFlow.swift; sourceTree = "<group>"; };
 		9F18ABDC1D9EB87B00364BD8 /* DBTableViewTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewTextCell.swift; path = Classes/TableView/Cell/DBTableViewTextCell.swift; sourceTree = "<group>"; };
 		9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DBTableViewTextCell.xib; path = Classes/TableView/Cell/DBTableViewTextCell.xib; sourceTree = "<group>"; };
 		9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Identifier.swift"; path = "Classes/Extensions/UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
-		9FB1F6471DA3DA55000C9058 /* DBInteractionObjectImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObjectImage.swift; path = Classes/Models/DBInteractionObjectImage.swift; sourceTree = "<group>"; };
 		9FB1F6491DA3DA8A000C9058 /* DBTableViewImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewImageCell.swift; path = Classes/TableView/Cell/DBTableViewImageCell.swift; sourceTree = "<group>"; };
 		9FB1F64A1DA3DA8A000C9058 /* DBTableViewImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DBTableViewImageCell.xib; path = Classes/TableView/Cell/DBTableViewImageCell.xib; sourceTree = "<group>"; };
 		9FDA8F431DA287C80086908D /* DBContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBContentManager.swift; path = Classes/ContentManager/DBContentManager.swift; sourceTree = "<group>"; };
 		9FDA8F451DA28E8B0086908D /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
-		9FDA8F481DA2A7890086908D /* DBInteractionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObject.swift; path = Classes/Models/DBInteractionObject.swift; sourceTree = "<group>"; };
-		9FDA8F4A1DA2AA300086908D /* DBInteractionObjectText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObjectText.swift; path = Classes/Models/DBInteractionObjectText.swift; sourceTree = "<group>"; };
 		9FFF92CC1D9E9DCB005E21F5 /* DBCollectionFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBCollectionFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFF92CF1D9E9DCB005E21F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FFF92D11D9E9DCB005E21F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		9F18ABD51D9EA7BA00364BD8 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				9F16A3431DA3E08200956158 /* DBTableView.swift */,
 				9F18ABD91D9EB82100364BD8 /* Cell */,
 				9F18ABD61D9EA7C200364BD8 /* DataSource */,
 			);
@@ -117,14 +120,14 @@
 			name = ContentManager;
 			sourceTree = "<group>";
 		};
-		9FDA8F471DA29F080086908D /* Models */ = {
+		9FDA8F471DA29F080086908D /* Cell Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9FDA8F481DA2A7890086908D /* DBInteractionObject.swift */,
-				9FDA8F4A1DA2AA300086908D /* DBInteractionObjectText.swift */,
-				9FB1F6471DA3DA55000C9058 /* DBInteractionObjectImage.swift */,
+				9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */,
+				9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */,
+				9F16A3471DA3E47A00956158 /* DBInteractionObjectText.swift */,
 			);
-			name = Models;
+			name = "Cell Controllers";
 			sourceTree = "<group>";
 		};
 		9FFF92C31D9E9DCB005E21F5 = {
@@ -169,7 +172,7 @@
 		9FFF92E21D9EA78D005E21F5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9FDA8F471DA29F080086908D /* Models */,
+				9FDA8F471DA29F080086908D /* Cell Controllers */,
 				9FDA8F421DA2879D0086908D /* ContentManager */,
 				9F18ABE01D9EB88B00364BD8 /* Extensions */,
 				9F18ABD51D9EA7BA00364BD8 /* TableView */,
@@ -253,16 +256,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F16A34A1DA3E47A00956158 /* DBInteractionObjectText.swift in Sources */,
 				9F18ABE21D9EB94600364BD8 /* UITableViewCell+Identifier.swift in Sources */,
+				9F16A3481DA3E47A00956158 /* DBInteractionObject.swift in Sources */,
 				9F18ABD81D9EA7F300364BD8 /* DBTableViewDataFlow.swift in Sources */,
-				9FDA8F4B1DA2AA300086908D /* DBInteractionObjectText.swift in Sources */,
 				9FFF92D21D9E9DCB005E21F5 /* ViewController.swift in Sources */,
 				9F18ABDE1D9EB87B00364BD8 /* DBTableViewTextCell.swift in Sources */,
-				9FB1F6481DA3DA55000C9058 /* DBInteractionObjectImage.swift in Sources */,
-				9FDA8F491DA2A7890086908D /* DBInteractionObject.swift in Sources */,
+				9F16A3491DA3E47A00956158 /* DBInteractionObjectImage.swift in Sources */,
 				9FFF92D01D9E9DCB005E21F5 /* AppDelegate.swift in Sources */,
 				9FDA8F441DA287C80086908D /* DBContentManager.swift in Sources */,
 				9FB1F64B1DA3DA8A000C9058 /* DBTableViewImageCell.swift in Sources */,
+				9F16A3441DA3E08200956158 /* DBTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

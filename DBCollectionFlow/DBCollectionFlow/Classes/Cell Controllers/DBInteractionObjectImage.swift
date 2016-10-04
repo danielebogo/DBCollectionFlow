@@ -9,11 +9,14 @@
 import UIKit
 
 class DBInteractionObjectImage: DBInteractionObject, DBInteractionObjectProtocol {
-    private let imageViewName:String
+    private let imageViewName_:String
     
     init(imageName:String) {
-        imageViewName = imageName
+        imageViewName_ = imageName
     }
+    
+    
+//MARK: Private methods
     
     
 //MARK: DBInteractionObjectProtocol
@@ -24,7 +27,7 @@ class DBInteractionObjectImage: DBInteractionObject, DBInteractionObjectProtocol
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DBTableViewImageCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewImageCell.db_cellIdentifier(), for: indexPath) as! DBTableViewImageCell
-        cell.setCellImage(UIImage(named: self.imageViewName)!)
+        cell.setCellImage(UIImage(named: self.imageViewName_)!)
         return cell
     }
     

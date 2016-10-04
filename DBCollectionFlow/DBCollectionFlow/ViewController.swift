@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: DBTableView!
     
-    private var _dataFlow: DBTableViewDataFlow?
-    private var _objects:Array<DBInteractionObject> = Array()
+    private var dataFlow_: DBTableViewDataFlow?
+    private var objects_:Array<DBInteractionObject> = Array()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,33 +21,24 @@ class ViewController: UIViewController {
         
         self.navigationItem.title = "Table View"
         
+        self.db_configureUI()
+        
         weak var weakSelf = self
         
         let contentManager = DBContentManager()
         contentManager.loadItemsWithBlock { (items: Array<DBContentManager.Item>) in
             weakSelf?.db_createInteractionObjects(items: items)
         }
-        
-        _dataFlow = DBTableViewDataFlow(target: self, data: _objects)
-        
-        self.db_configureUI()
     }
 
     
 // MARK: Private methods
     
     private func db_configureUI() {
-        let textCellNib = UINib(nibName:"DBTableViewTextCell", bundle: nil)
-        let imageCellNib = UINib(nibName:"DBTableViewImageCell", bundle: nil)
-
-        self.tableView.register(textCellNib, forCellReuseIdentifier: DBTableViewTextCell.db_cellIdentifier())
-        self.tableView.register(imageCellNib, forCellReuseIdentifier: DBTableViewImageCell.db_cellIdentifier())
+        self.dataFlow_ = DBTableViewDataFlow(target: self, data: self.objects_)
         
-        self.tableView.estimatedRowHeight = 44.0
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-
-        self.tableView.dataSource = _dataFlow
-        self.tableView.delegate = _dataFlow
+        self.tableView.dataSource = self.dataFlow_
+        self.tableView.delegate = self.dataFlow_
     }
     
     private func db_createInteractionObjects(items: Array<DBContentManager.Item>) {
@@ -56,18 +47,21 @@ class ViewController: UIViewController {
             switch item.itemType {
             case .Text:
                 if let itemText = item.itemText {
-                    _objects.append(DBInteractionObjectText.init(text: itemText))
+                    self.objects_.append(DBInteractionObjectText.init(text: itemText))
                 }
                 break
                 
             case .Image:
                 if let itemImageName = item.itemImage {
-                    _objects.append(DBInteractionObjectImage.init(imageName: itemImageName))
+                    self.objects_.append(DBInteractionObjectImage.init(imageName: itemImageName))
                 }
                 
                 break
             }
         }
+        
+        self.dataFlow_?.items = self.objects_
+        self.tableView.reloadData()
     }
 }
 

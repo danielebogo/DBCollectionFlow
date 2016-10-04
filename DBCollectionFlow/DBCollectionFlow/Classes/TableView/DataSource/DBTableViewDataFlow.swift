@@ -10,12 +10,20 @@ import UIKit
 
 class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource  {
     
-    private let target: UIViewController
+    private let target_: UIViewController
     
     var items: Array<DBInteractionObject>?
     
+    init(target:UIViewController) {
+        self.target_ = target
+        
+        super.init()
+        
+        self.db_configureDataSource(Array())
+    }
+    
     init(target:UIViewController, data:Array<DBInteractionObject>) {
-        self.target = target
+        self.target_ = target
         
         super.init()
         
@@ -51,6 +59,6 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let object = self.items![indexPath.row] as! DBInteractionObjectProtocol
-        object.target(self.target, tableView: tableView, didSelectRowAt: indexPath)
+        object.target(self.target_, tableView: tableView, didSelectRowAt: indexPath)
     }
 }

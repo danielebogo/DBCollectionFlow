@@ -18,9 +18,9 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zaM-W3-KSX"/>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zaM-W3-KSX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cgc-iS-WEc"/>
+                    <constraint firstItem="zaM-W3-KSX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="cgc-iS-WEc"/>
                     <constraint firstAttribute="trailing" secondItem="zaM-W3-KSX" secondAttribute="trailing" id="fGX-ld-LDd"/>
-                    <constraint firstAttribute="bottom" secondItem="zaM-W3-KSX" secondAttribute="bottom" id="h34-Pr-7uc"/>
+                    <constraint firstAttribute="bottom" secondItem="zaM-W3-KSX" secondAttribute="bottom" constant="5" id="h34-Pr-7uc"/>
                     <constraint firstItem="zaM-W3-KSX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iM9-Ib-IMR"/>
                 </constraints>
             </tableViewCellContentView>
