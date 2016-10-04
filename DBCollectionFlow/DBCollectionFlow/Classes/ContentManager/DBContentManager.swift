@@ -14,17 +14,22 @@ class DBContentManager: NSObject {
     enum ItemType: Int {
         case Text = 0
         case Image
+        case URL
     }
     
     struct Item {
         let itemText:String?
         let itemType:ItemType
         let itemImage:String?
+        let itemURL:String?
+        let itemURLTitle:String?
         
         init(data:Dictionary<String, Any>) {
             itemText = data["item_text"] as? String
             itemType = ItemType.init(rawValue: data["item_type"] as! Int)!
             itemImage = data["item_image"] as? String
+            itemURL = data["item_URL"] as? String
+            itemURLTitle = data["item_URL_title"] as? String
         }
     }
     
@@ -50,10 +55,16 @@ class DBContentManager: NSObject {
                                                               "item_type": 1],
                                                              
                                                              ["item_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                                                              "item_type": 0],
+                                                             
+                                                             ["item_URL": "https://www.lonelyplanet.com/spain/valencia-and-murcia/alicante",
+                                                              "item_URL_title": "LONELY PLANET: ALICANTE",
+                                                              "item_type": 2],
+                                                             
+                                                             ["item_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie, lacus sed congue sollicitudin, nunc arcu imperdiet elit, nec vulputate libero mauris non urna. Aenean ac massa semper enim accumsan porta. Quisque ut dolor augue. Sed sodales non tortor a suscipit. Aliquam erat volutpat. Integer gravida arcu sed mollis placerat. Donec vulputate felis a egestas dignissim. Fusce urna odio, faucibus a risus sit amet, eleifend semper mi. Suspendisse varius sodales leo quis vulputate.",
                                                               "item_type": 0]
         ]
 
-        
         var items:Array<Item> = Array()
         
         for privateItem:Dictionary<String, Any> in privateItems {

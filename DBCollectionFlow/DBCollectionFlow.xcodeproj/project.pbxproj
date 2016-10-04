@@ -11,6 +11,9 @@
 		9F16A3481DA3E47A00956158 /* DBInteractionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */; };
 		9F16A3491DA3E47A00956158 /* DBInteractionObjectImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */; };
 		9F16A34A1DA3E47A00956158 /* DBInteractionObjectText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3471DA3E47A00956158 /* DBInteractionObjectText.swift */; };
+		9F16A3511DA3ECC400956158 /* DBInteractionObjectURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3501DA3ECC400956158 /* DBInteractionObjectURL.swift */; };
+		9F16A3541DA3ECE700956158 /* DBTableViewURLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3521DA3ECE700956158 /* DBTableViewURLCell.swift */; };
+		9F16A3551DA3ECE700956158 /* DBTableViewURLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F16A3531DA3ECE700956158 /* DBTableViewURLCell.xib */; };
 		9F18ABD81D9EA7F300364BD8 /* DBTableViewDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABD71D9EA7F300364BD8 /* DBTableViewDataFlow.swift */; };
 		9F18ABDE1D9EB87B00364BD8 /* DBTableViewTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABDC1D9EB87B00364BD8 /* DBTableViewTextCell.swift */; };
 		9F18ABDF1D9EB87B00364BD8 /* DBTableViewTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */; };
@@ -31,6 +34,9 @@
 		9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObject.swift; path = "Classes/Cell Controllers/DBInteractionObject.swift"; sourceTree = "<group>"; };
 		9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObjectImage.swift; path = "Classes/Cell Controllers/DBInteractionObjectImage.swift"; sourceTree = "<group>"; };
 		9F16A3471DA3E47A00956158 /* DBInteractionObjectText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObjectText.swift; path = "Classes/Cell Controllers/DBInteractionObjectText.swift"; sourceTree = "<group>"; };
+		9F16A3501DA3ECC400956158 /* DBInteractionObjectURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObjectURL.swift; path = "Classes/Cell Controllers/DBInteractionObjectURL.swift"; sourceTree = "<group>"; };
+		9F16A3521DA3ECE700956158 /* DBTableViewURLCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewURLCell.swift; path = Classes/TableView/Cell/DBTableViewURLCell.swift; sourceTree = "<group>"; };
+		9F16A3531DA3ECE700956158 /* DBTableViewURLCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DBTableViewURLCell.xib; path = Classes/TableView/Cell/DBTableViewURLCell.xib; sourceTree = "<group>"; };
 		9F18ABD71D9EA7F300364BD8 /* DBTableViewDataFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewDataFlow.swift; path = Classes/TableView/DataSource/DBTableViewDataFlow.swift; sourceTree = "<group>"; };
 		9F18ABDC1D9EB87B00364BD8 /* DBTableViewTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewTextCell.swift; path = Classes/TableView/Cell/DBTableViewTextCell.swift; sourceTree = "<group>"; };
 		9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DBTableViewTextCell.xib; path = Classes/TableView/Cell/DBTableViewTextCell.xib; sourceTree = "<group>"; };
@@ -59,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F16A34B1DA3EAB400956158 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				9F16A3521DA3ECE700956158 /* DBTableViewURLCell.swift */,
+				9F16A3531DA3ECE700956158 /* DBTableViewURLCell.xib */,
+			);
+			name = URL;
+			sourceTree = "<group>";
+		};
 		9F18ABD51D9EA7BA00364BD8 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +95,7 @@
 		9F18ABD91D9EB82100364BD8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				9F16A34B1DA3EAB400956158 /* URL */,
 				9FB1F6461DA3B938000C9058 /* Image */,
 				9FB1F6451DA3B92D000C9058 /* Text */,
 			);
@@ -126,6 +142,7 @@
 				9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */,
 				9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */,
 				9F16A3471DA3E47A00956158 /* DBInteractionObjectText.swift */,
+				9F16A3501DA3ECC400956158 /* DBInteractionObjectURL.swift */,
 			);
 			name = "Cell Controllers";
 			sourceTree = "<group>";
@@ -244,6 +261,7 @@
 				9FB1F64C1DA3DA8A000C9058 /* DBTableViewImageCell.xib in Resources */,
 				9FFF92D71D9E9DCB005E21F5 /* Assets.xcassets in Resources */,
 				9FDA8F461DA28E8B0086908D /* items.json in Resources */,
+				9F16A3551DA3ECE700956158 /* DBTableViewURLCell.xib in Resources */,
 				9F18ABDF1D9EB87B00364BD8 /* DBTableViewTextCell.xib in Resources */,
 				9FFF92D51D9E9DCB005E21F5 /* Main.storyboard in Resources */,
 			);
@@ -261,10 +279,12 @@
 				9F16A3481DA3E47A00956158 /* DBInteractionObject.swift in Sources */,
 				9F18ABD81D9EA7F300364BD8 /* DBTableViewDataFlow.swift in Sources */,
 				9FFF92D21D9E9DCB005E21F5 /* ViewController.swift in Sources */,
+				9F16A3511DA3ECC400956158 /* DBInteractionObjectURL.swift in Sources */,
 				9F18ABDE1D9EB87B00364BD8 /* DBTableViewTextCell.swift in Sources */,
 				9F16A3491DA3E47A00956158 /* DBInteractionObjectImage.swift in Sources */,
 				9FFF92D01D9E9DCB005E21F5 /* AppDelegate.swift in Sources */,
 				9FDA8F441DA287C80086908D /* DBContentManager.swift in Sources */,
+				9F16A3541DA3ECE700956158 /* DBTableViewURLCell.swift in Sources */,
 				9FB1F64B1DA3DA8A000C9058 /* DBTableViewImageCell.swift in Sources */,
 				9F16A3441DA3E08200956158 /* DBTableView.swift in Sources */,
 			);

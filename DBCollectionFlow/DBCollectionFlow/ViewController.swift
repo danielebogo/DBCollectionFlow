@@ -45,18 +45,24 @@ class ViewController: UIViewController {
         for item:DBContentManager.Item in items {
             
             switch item.itemType {
-            case .Text:
-                if let itemText = item.itemText {
-                    self.objects_.append(DBInteractionObjectText.init(text: itemText))
-                }
-                break
-                
-            case .Image:
-                if let itemImageName = item.itemImage {
-                    self.objects_.append(DBInteractionObjectImage.init(imageName: itemImageName))
-                }
-                
-                break
+                case .Text:
+                    if let itemText = item.itemText {
+                        self.objects_.append(DBInteractionObjectText.init(text: itemText))
+                    }
+                    break
+                    
+                case .Image:
+                    if let itemImageName = item.itemImage {
+                        self.objects_.append(DBInteractionObjectImage.init(imageName: itemImageName))
+                    }
+                    
+                    break
+                    
+                case .URL:
+                    if let itemURL = item.itemURL, let itemURLTitle = item.itemURLTitle {
+                        self.objects_.append(DBInteractionObjectURL(URL: itemURL, title: itemURLTitle))
+                    }
+                    break
             }
         }
         

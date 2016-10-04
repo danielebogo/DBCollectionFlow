@@ -1,16 +1,17 @@
 //
-//  DBTableViewTextCell.swift
+//  DBTableViewURLCell.swift
 //  DBCollectionFlow
 //
-//  Created by Daniele Bogo on 30/09/2016.
+//  Created by Daniele Bogo on 04/10/2016.
 //  Copyright © 2016 Daniele Bogo. All rights reserved.
 //
 
 import UIKit
 
-class DBTableViewTextCell: UITableViewCell {
+class DBTableViewURLCell: UITableViewCell {
 
-    @IBOutlet weak private var cellTextLabel: UILabel!
+    @IBOutlet weak private var cellLabelText: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,12 +19,12 @@ class DBTableViewTextCell: UITableViewCell {
         
         self.db_buildUI()
     }
-
+    
     
 //MARK: Public methods
     
     public func setCellText(_ text:String) {
-        self.cellTextLabel.text = text
+        self.cellLabelText.text = text
     }
     
     
