@@ -8,10 +8,10 @@
 
 import UIKit
 
+
 class DBTableViewURLCell: UITableViewCell {
 
     @IBOutlet weak private var cellLabelText: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -58,7 +58,10 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let object = self.items![indexPath.row] as! DBInteractionObjectProtocol
-        object.target(self.target_, tableView: tableView, didSelectRowAt: indexPath)
+        let object = self.items![indexPath.row]
+        
+        if object is DBInteractionObjectSelectionProtocol {
+            (object as! DBInteractionObjectSelectionProtocol).target(self.target_, tableView: tableView, didSelectRowAt: indexPath)
+        }
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class DBTableViewImageCell: UITableViewCell {
 
     @IBOutlet weak private var cellImageView: UIImageView!

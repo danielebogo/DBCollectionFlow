@@ -8,9 +8,13 @@
 
 import UIKit
 
+
 protocol DBInteractionObjectProtocol {
     func cellSiseWithTableView(_ target:Any, tableView: UITableView) -> CGFloat
     func tableView(_ target:Any, tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+}
+
+protocol DBInteractionObjectSelectionProtocol:DBInteractionObjectProtocol {
     func target(_ target:Any, tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 }
 

@@ -29,8 +29,4 @@ class DBInteractionObjectText: DBInteractionObject, DBInteractionObjectProtocol 
         cell.setCellText(self.objectText_)
         return cell
     }
-    
-    func target(_ target: Any, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
 }

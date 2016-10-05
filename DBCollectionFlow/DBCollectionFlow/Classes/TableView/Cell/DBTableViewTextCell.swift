@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class DBTableViewTextCell: UITableViewCell {
 
     @IBOutlet weak private var cellTextLabel: UILabel!

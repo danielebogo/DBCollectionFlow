@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class DBInteractionObjectImage: DBInteractionObject, DBInteractionObjectProtocol {
     private let imageViewName_:String
     
@@ -29,9 +30,5 @@ class DBInteractionObjectImage: DBInteractionObject, DBInteractionObjectProtocol
         let cell: DBTableViewImageCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewImageCell.db_cellIdentifier(), for: indexPath) as! DBTableViewImageCell
         cell.setCellImage(UIImage(named: self.imageViewName_)!)
         return cell
-    }
-    
-    func target(_ target: Any, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 }

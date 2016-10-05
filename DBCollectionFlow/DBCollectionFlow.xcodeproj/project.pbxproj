@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9F07BD391DA52C6B000C7658 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07BD371DA52C6B000C7658 /* ListViewController.swift */; };
 		9F07BD3A1DA52C6B000C7658 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07BD381DA52C6B000C7658 /* ViewController.swift */; };
+		9F07BD3C1DA546F4000C7658 /* text_items.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F07BD3B1DA546F4000C7658 /* text_items.json */; };
 		9F16A3441DA3E08200956158 /* DBTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3431DA3E08200956158 /* DBTableView.swift */; };
 		9F16A3481DA3E47A00956158 /* DBInteractionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */; };
 		9F16A3491DA3E47A00956158 /* DBInteractionObjectImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		9F07BD371DA52C6B000C7658 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = "Classes/View Controllers/ListViewController.swift"; sourceTree = "<group>"; };
 		9F07BD381DA52C6B000C7658 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Classes/View Controllers/ViewController.swift"; sourceTree = "<group>"; };
+		9F07BD3B1DA546F4000C7658 /* text_items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = text_items.json; sourceTree = "<group>"; };
 		9F16A3431DA3E08200956158 /* DBTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableView.swift; path = Classes/TableView/DBTableView.swift; sourceTree = "<group>"; };
 		9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObject.swift; path = "Classes/Cell Controllers/DBInteractionObject.swift"; sourceTree = "<group>"; };
 		9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObjectImage.swift; path = "Classes/Cell Controllers/DBInteractionObjectImage.swift"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		9FFF92E11D9E9EB6005E21F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F07BD3B1DA546F4000C7658 /* text_items.json */,
 				9FDA8F451DA28E8B0086908D /* items.json */,
 				9FFF92DB1D9E9DCB005E21F5 /* Info.plist */,
 				9FFF92D61D9E9DCB005E21F5 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 				9FFF92D71D9E9DCB005E21F5 /* Assets.xcassets in Resources */,
 				9FDA8F461DA28E8B0086908D /* items.json in Resources */,
 				9F16A3551DA3ECE700956158 /* DBTableViewURLCell.xib in Resources */,
+				9F07BD3C1DA546F4000C7658 /* text_items.json in Resources */,
 				9F18ABDF1D9EB87B00364BD8 /* DBTableViewTextCell.xib in Resources */,
 				9FFF92D51D9E9DCB005E21F5 /* Main.storyboard in Resources */,
 			);

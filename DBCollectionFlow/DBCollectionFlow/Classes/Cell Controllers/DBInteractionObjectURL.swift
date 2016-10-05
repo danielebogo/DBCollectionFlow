@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 
 
-class DBInteractionObjectURL: DBInteractionObject, DBInteractionObjectProtocol {
+class DBInteractionObjectURL: DBInteractionObject, DBInteractionObjectSelectionProtocol {
 
     private let objectURL_:String
     private let objectURLTitle_:String
@@ -32,7 +32,7 @@ class DBInteractionObjectURL: DBInteractionObject, DBInteractionObjectProtocol {
         cell.setCellText(self.objectURLTitle_)
         return cell
     }
-    
+
     func target(_ target: Any, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let objectURL:URL = URL(string: objectURL_)!
         let vc = SFSafariViewController(url: objectURL, entersReaderIfAvailable: true)

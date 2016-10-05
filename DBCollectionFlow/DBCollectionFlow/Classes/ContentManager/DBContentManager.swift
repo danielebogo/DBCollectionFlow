@@ -37,15 +37,21 @@ class DBContentManager: NSObject {
 // MARK: Public methods
     
     public func loadItemsWithBlock(completion: (_ items: Array<DBInteractionObject>) -> Void) {
-        let items = db_loadLocalJson()
+        let items = db_loadLocalJson("items")
         completion(items)
     }
+    
+    public func loadTextItemsWithBlock(completion: (_ items: Array<DBInteractionObject>) -> Void) {
+        let items = db_loadLocalJson("text_items")
+        completion(items)
+    }
+
     
     
 // MARK: Private methods
     
-    private func db_loadLocalJson() -> Array<DBInteractionObject> {
-        if let path = Bundle.main.path(forResource: "items", ofType: "json") {
+    private func db_loadLocalJson(_ resourceName:String) -> Array<DBInteractionObject> {
+        if let path = Bundle.main.path(forResource: resourceName, ofType: "json") {
             do {
                 let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
                 if let itemsArray = try? JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as! Array<Dictionary<String, Any>> {
