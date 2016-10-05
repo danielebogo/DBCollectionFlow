@@ -45,26 +45,25 @@ class DBContentManager: NSObject {
 // MARK: Private methods
     
     private func db_loadLocalJson() -> Array<DBInteractionObject> {
-        let privateItems: Array<Dictionary<String, Any>> = [ ["item_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac justo eu turpis maximus sollicitudin eget quis massa. Sed ac convallis enim. In ac turpis non lectus ullamcorper efficitur.",
-                                                              "item_type": 0],
-                                                             
-                                                             ["item_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac justo eu turpis maximus sollicitudin eget quis massa. Sed ac convallis enim.",
-                                                              "item_type": 0],
-                                                             
-                                                             ["item_image": "alicante",
-                                                              "item_type": 1],
-                                                             
-                                                             ["item_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                                                              "item_type": 0],
-                                                             
-                                                             ["item_URL": "https://www.lonelyplanet.com/spain/valencia-and-murcia/alicante",
-                                                              "item_URL_title": "LONELY PLANET: ALICANTE",
-                                                              "item_type": 2],
-                                                             
-                                                             ["item_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie, lacus sed congue sollicitudin, nunc arcu imperdiet elit, nec vulputate libero mauris non urna. Aenean ac massa semper enim accumsan porta. Quisque ut dolor augue. Sed sodales non tortor a suscipit. Aliquam erat volutpat. Integer gravida arcu sed mollis placerat. Donec vulputate felis a egestas dignissim. Fusce urna odio, faucibus a risus sit amet, eleifend semper mi. Suspendisse varius sodales leo quis vulputate.",
-                                                              "item_type": 0]
-        ]
+        if let path = Bundle.main.path(forResource: "items", ofType: "json") {
+            do {
+                let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
+                if let itemsArray = try? JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as! Array<Dictionary<String, Any>> {
+                    return self.db_mapItems(privateItems: itemsArray)
+                } else {
+                    print("Could not get json from file, make sure that file contains valid json.")
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
 
+        return []
+    }
+    
+    private func db_mapItems(privateItems: Array<Dictionary<String, Any>>) -> Array<DBInteractionObject> {
         var items:Array<DBInteractionObject> = Array()
         
         for privateItem:Dictionary<String, Any> in privateItems {
