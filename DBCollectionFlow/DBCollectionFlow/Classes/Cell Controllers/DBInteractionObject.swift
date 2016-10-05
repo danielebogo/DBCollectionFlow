@@ -9,12 +9,12 @@
 import UIKit
 
 protocol DBInteractionObjectProtocol {
-    func cellSiseWithTableView(_ tableView: UITableView) -> CGFloat
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func cellSiseWithTableView(_ target:Any, tableView: UITableView) -> CGFloat
+    func tableView(_ target:Any, tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     func target(_ target:Any, tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 }
 
 
 class DBInteractionObject: NSObject {
-
+    var editableState:Bool = false
 }

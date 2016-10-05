@@ -21,11 +21,11 @@ class DBInteractionObjectImage: DBInteractionObject, DBInteractionObjectProtocol
     
 //MARK: DBInteractionObjectProtocol
     
-    func cellSiseWithTableView(_ tableView: UITableView) -> CGFloat {
+    func cellSiseWithTableView(_ target: Any, tableView: UITableView) -> CGFloat {
         return tableView.frame.width
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ target: Any, tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DBTableViewImageCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewImageCell.db_cellIdentifier(), for: indexPath) as! DBTableViewImageCell
         cell.setCellImage(UIImage(named: self.imageViewName_)!)
         return cell

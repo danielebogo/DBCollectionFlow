@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Table View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DBCollectionFlow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Table View" id="BYZ-38-t0r" customClass="ViewController" customModule="DBCollectionFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,17 +22,32 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlD-GN-pbl">
+                                <color key="backgroundColor" red="0.93731737140000004" green="0.93728923799999997" blue="0.93730515240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oFV-sh-uG6"/>
+                                </constraints>
+                                <state key="normal" title="OPEN TEXT LIST">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SQ7-AL-Ecn" kind="show" id="9AQ-cr-rhO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4vJ-I0-kgb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7Wd-1J-iNS"/>
+                            <constraint firstItem="IlD-GN-pbl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Av3-pI-TxP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4vJ-I0-kgb" secondAttribute="bottom" id="BKt-E1-HBe"/>
+                            <constraint firstAttribute="trailing" secondItem="IlD-GN-pbl" secondAttribute="trailing" id="JF9-dk-T4P"/>
                             <constraint firstItem="4vJ-I0-kgb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JS7-jP-Qnu"/>
                             <constraint firstAttribute="trailing" secondItem="4vJ-I0-kgb" secondAttribute="trailing" id="Zj9-fd-49S"/>
+                            <constraint firstItem="IlD-GN-pbl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eFW-pv-lyj"/>
+                            <constraint firstItem="4vJ-I0-kgb" firstAttribute="top" secondItem="IlD-GN-pbl" secondAttribute="bottom" id="fhM-jT-AO0"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="dfz-D7-Zvo"/>
+                    <navigationItem key="navigationItem" title="Mix Table View" id="dfz-D7-Zvo"/>
                     <connections>
                         <outlet property="tableView" destination="4vJ-I0-kgb" id="QUI-MM-pFt"/>
                     </connections>
@@ -40,6 +55,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-759.20000000000005" y="122.78860569715144"/>
+        </scene>
+        <!--Text List-->
+        <scene sceneID="MVc-6u-FX1">
+            <objects>
+                <viewController title="Text List" id="SQ7-AL-Ecn" customClass="ListViewController" customModule="DBCollectionFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qT2-If-bRu"/>
+                        <viewControllerLayoutGuide type="bottom" id="IRf-Ng-NUl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ETJ-NS-XgN">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-5p-OX4" customClass="DBTableView" customModule="DBCollectionFlow" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IRf-Ng-NUl" firstAttribute="top" secondItem="QQr-5p-OX4" secondAttribute="bottom" id="2cD-bP-CyA"/>
+                            <constraint firstAttribute="trailing" secondItem="QQr-5p-OX4" secondAttribute="trailing" id="dCw-7m-QFZ"/>
+                            <constraint firstItem="QQr-5p-OX4" firstAttribute="top" secondItem="qT2-If-bRu" secondAttribute="bottom" id="lar-1W-157"/>
+                            <constraint firstItem="QQr-5p-OX4" firstAttribute="leading" secondItem="ETJ-NS-XgN" secondAttribute="leading" id="tGE-pL-DJs"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="tableView" destination="QQr-5p-OX4" id="eKH-E1-CeS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXV-C8-8lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bv9-tu-Vow">

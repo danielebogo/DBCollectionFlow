@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F07BD391DA52C6B000C7658 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07BD371DA52C6B000C7658 /* ListViewController.swift */; };
+		9F07BD3A1DA52C6B000C7658 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07BD381DA52C6B000C7658 /* ViewController.swift */; };
 		9F16A3441DA3E08200956158 /* DBTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3431DA3E08200956158 /* DBTableView.swift */; };
 		9F16A3481DA3E47A00956158 /* DBInteractionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */; };
 		9F16A3491DA3E47A00956158 /* DBInteractionObjectImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */; };
@@ -23,13 +25,14 @@
 		9FDA8F441DA287C80086908D /* DBContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA8F431DA287C80086908D /* DBContentManager.swift */; };
 		9FDA8F461DA28E8B0086908D /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA8F451DA28E8B0086908D /* items.json */; };
 		9FFF92D01D9E9DCB005E21F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF92CF1D9E9DCB005E21F5 /* AppDelegate.swift */; };
-		9FFF92D21D9E9DCB005E21F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF92D11D9E9DCB005E21F5 /* ViewController.swift */; };
 		9FFF92D51D9E9DCB005E21F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF92D31D9E9DCB005E21F5 /* Main.storyboard */; };
 		9FFF92D71D9E9DCB005E21F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF92D61D9E9DCB005E21F5 /* Assets.xcassets */; };
 		9FFF92DA1D9E9DCB005E21F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF92D81D9E9DCB005E21F5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F07BD371DA52C6B000C7658 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = "Classes/View Controllers/ListViewController.swift"; sourceTree = "<group>"; };
+		9F07BD381DA52C6B000C7658 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Classes/View Controllers/ViewController.swift"; sourceTree = "<group>"; };
 		9F16A3431DA3E08200956158 /* DBTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableView.swift; path = Classes/TableView/DBTableView.swift; sourceTree = "<group>"; };
 		9F16A3451DA3E47A00956158 /* DBInteractionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObject.swift; path = "Classes/Cell Controllers/DBInteractionObject.swift"; sourceTree = "<group>"; };
 		9F16A3461DA3E47A00956158 /* DBInteractionObjectImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBInteractionObjectImage.swift; path = "Classes/Cell Controllers/DBInteractionObjectImage.swift"; sourceTree = "<group>"; };
@@ -47,7 +50,6 @@
 		9FDA8F451DA28E8B0086908D /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		9FFF92CC1D9E9DCB005E21F5 /* DBCollectionFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBCollectionFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFF92CF1D9E9DCB005E21F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FFF92D11D9E9DCB005E21F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9FFF92D41D9E9DCB005E21F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FFF92D61D9E9DCB005E21F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FFF92D91D9E9DCB005E21F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F07BD361DA52C25000C7658 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F07BD371DA52C6B000C7658 /* ListViewController.swift */,
+				9F07BD381DA52C6B000C7658 /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		9F16A34B1DA3EAB400956158 /* URL */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				9FFF92CF1D9E9DCB005E21F5 /* AppDelegate.swift */,
-				9FFF92D11D9E9DCB005E21F5 /* ViewController.swift */,
 				9FFF92D31D9E9DCB005E21F5 /* Main.storyboard */,
 				9FFF92E21D9EA78D005E21F5 /* Classes */,
 				9FFF92E11D9E9EB6005E21F5 /* Resources */,
@@ -189,6 +199,7 @@
 		9FFF92E21D9EA78D005E21F5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9F07BD361DA52C25000C7658 /* View Controllers */,
 				9FDA8F471DA29F080086908D /* Cell Controllers */,
 				9FDA8F421DA2879D0086908D /* ContentManager */,
 				9F18ABE01D9EB88B00364BD8 /* Extensions */,
@@ -278,7 +289,7 @@
 				9F18ABE21D9EB94600364BD8 /* UITableViewCell+Identifier.swift in Sources */,
 				9F16A3481DA3E47A00956158 /* DBInteractionObject.swift in Sources */,
 				9F18ABD81D9EA7F300364BD8 /* DBTableViewDataFlow.swift in Sources */,
-				9FFF92D21D9E9DCB005E21F5 /* ViewController.swift in Sources */,
+				9F07BD3A1DA52C6B000C7658 /* ViewController.swift in Sources */,
 				9F16A3511DA3ECC400956158 /* DBInteractionObjectURL.swift in Sources */,
 				9F18ABDE1D9EB87B00364BD8 /* DBTableViewTextCell.swift in Sources */,
 				9F16A3491DA3E47A00956158 /* DBInteractionObjectImage.swift in Sources */,
@@ -286,6 +297,7 @@
 				9FDA8F441DA287C80086908D /* DBContentManager.swift in Sources */,
 				9F16A3541DA3ECE700956158 /* DBTableViewURLCell.swift in Sources */,
 				9FB1F64B1DA3DA8A000C9058 /* DBTableViewImageCell.swift in Sources */,
+				9F07BD391DA52C6B000C7658 /* ListViewController.swift in Sources */,
 				9F16A3441DA3E08200956158 /* DBTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

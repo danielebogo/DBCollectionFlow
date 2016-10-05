@@ -11,13 +11,13 @@ import UIKit
 
 class DBContentManager: NSObject {
     
-    enum ItemType: Int {
+    private enum ItemType: Int {
         case Text = 0
         case Image
         case URL
     }
     
-    struct Item {
+    private struct Item {
         let itemText:String?
         let itemType:ItemType
         let itemImage:String?
@@ -36,7 +36,7 @@ class DBContentManager: NSObject {
 
 // MARK: Public methods
     
-    public func loadItemsWithBlock(completion: (_ items: Array<Item>) -> Void) {
+    public func loadItemsWithBlock(completion: (_ items: Array<DBInteractionObject>) -> Void) {
         let items = db_loadLocalJson()
         completion(items)
     }
@@ -44,7 +44,7 @@ class DBContentManager: NSObject {
     
 // MARK: Private methods
     
-    private func db_loadLocalJson() -> Array<Item> {
+    private func db_loadLocalJson() -> Array<DBInteractionObject> {
         let privateItems: Array<Dictionary<String, Any>> = [ ["item_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac justo eu turpis maximus sollicitudin eget quis massa. Sed ac convallis enim. In ac turpis non lectus ullamcorper efficitur.",
                                                               "item_type": 0],
                                                              
@@ -65,11 +65,31 @@ class DBContentManager: NSObject {
                                                               "item_type": 0]
         ]
 
-        var items:Array<Item> = Array()
+        var items:Array<DBInteractionObject> = Array()
         
         for privateItem:Dictionary<String, Any> in privateItems {
             let item:Item = Item.init(data: privateItem)
-            items.append(item)
+            
+            switch item.itemType {
+            case .Text:
+                if let itemText = item.itemText {
+                    items.append(DBInteractionObjectText.init(text: itemText))
+                }
+                break
+                
+            case .Image:
+                if let itemImageName = item.itemImage {
+                    items.append(DBInteractionObjectImage.init(imageName: itemImageName))
+                }
+                
+                break
+                
+            case .URL:
+                if let itemURL = item.itemURL, let itemURLTitle = item.itemURLTitle {
+                    items.append(DBInteractionObjectURL(URL: itemURL, title: itemURLTitle))
+                }
+                break
+            }
         }
         
         return items

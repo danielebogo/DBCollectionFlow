@@ -23,11 +23,11 @@ class DBInteractionObjectURL: DBInteractionObject, DBInteractionObjectProtocol {
     
 //MARK: DBInteractionObjectProtocol
     
-    func cellSiseWithTableView(_ tableView: UITableView) -> CGFloat {
+    func cellSiseWithTableView(_ target: Any, tableView: UITableView) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ target: Any, tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DBTableViewURLCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewURLCell.db_cellIdentifier(), for: indexPath) as! DBTableViewURLCell
         cell.setCellText(self.objectURLTitle_)
         return cell
