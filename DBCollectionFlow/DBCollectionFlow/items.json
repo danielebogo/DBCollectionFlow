@@ -8,7 +8,7 @@
       "item_type": 0
     },
     {
-      "item_image": "alicante",
+      "item_images": ["alicante", "alicante_3", "alicante_2"],
       "item_type": 1
     },
     {

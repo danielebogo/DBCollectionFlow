@@ -20,14 +20,14 @@ class DBContentManager: NSObject {
     private struct Item {
         let itemText:String?
         let itemType:ItemType
-        let itemImage:String?
+        let itemImages:Array<String>?
         let itemURL:String?
         let itemURLTitle:String?
         
         init(data:Dictionary<String, Any>) {
             itemText = data["item_text"] as? String
             itemType = ItemType.init(rawValue: data["item_type"] as! Int)!
-            itemImage = data["item_image"] as? String
+            itemImages = data["item_images"] as? Array<String>
             itemURL = data["item_URL"] as? String
             itemURLTitle = data["item_URL_title"] as? String
         }
@@ -83,8 +83,8 @@ class DBContentManager: NSObject {
                 break
                 
             case .Image:
-                if let itemImageName = item.itemImage {
-                    items.append(DBInteractionObjectImage.init(imageName: itemImageName))
+                if let itemImages = item.itemImages {
+                    items.append(DBInteractionObjectImage.init(itemImages: itemImages))
                 }
                 
                 break
