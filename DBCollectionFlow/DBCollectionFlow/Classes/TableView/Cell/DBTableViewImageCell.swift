@@ -11,7 +11,16 @@ import UIKit
 
 class DBTableViewImageCell: UITableViewCell {
 
-    private var scrollView_ = UIScrollView(frame: CGRect.zero)
+    @IBOutlet weak private var scrollView_: UIScrollView!
+    
+    var scrollViewDelegate:UIScrollViewDelegate? {
+        get {
+            return self.scrollView_.delegate
+        }
+        set {
+            self.scrollView_.delegate = newValue
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +33,6 @@ class DBTableViewImageCell: UITableViewCell {
 //MARK: Public methods
     
     public func setCellImages(_ images:[String]) {
-        self.scrollView_.frame = self.contentView.bounds
-        
         var lastY:CGFloat = 0.0
         
         for (index, image) in images.enumerated() {
@@ -51,9 +58,6 @@ class DBTableViewImageCell: UITableViewCell {
     
     private func db_buildUI() {
         self.selectionStyle = .none
-        
-        self.scrollView_.showsHorizontalScrollIndicator = false
-        self.contentView.addSubview(self.scrollView_)
     }
 
 }

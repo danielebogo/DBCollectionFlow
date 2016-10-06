@@ -20,14 +20,14 @@ class DBContentManager: NSObject {
     private struct Item {
         let itemText:String?
         let itemType:ItemType
-        let itemImages:Array<String>?
+        let itemImages:[String]?
         let itemURL:String?
         let itemURLTitle:String?
         
         init(data:Dictionary<String, Any>) {
             itemText = data["item_text"] as? String
             itemType = ItemType.init(rawValue: data["item_type"] as! Int)!
-            itemImages = data["item_images"] as? Array<String>
+            itemImages = data["item_images"] as? [String]
             itemURL = data["item_URL"] as? String
             itemURLTitle = data["item_URL_title"] as? String
         }
@@ -36,12 +36,12 @@ class DBContentManager: NSObject {
 
 // MARK: Public methods
     
-    public func loadItemsWithBlock(completion: (_ items: Array<DBInteractionObject>) -> Void) {
+    public func loadItemsWithBlock(completion: (_ items: [DBInteractionObject]) -> Void) {
         let items = db_loadLocalJson("items")
         completion(items)
     }
     
-    public func loadTextItemsWithBlock(completion: (_ items: Array<DBInteractionObject>) -> Void) {
+    public func loadTextItemsWithBlock(completion: (_ items: [DBInteractionObject]) -> Void) {
         let items = db_loadLocalJson("text_items")
         completion(items)
     }
@@ -50,7 +50,7 @@ class DBContentManager: NSObject {
     
 // MARK: Private methods
     
-    private func db_loadLocalJson(_ resourceName:String) -> Array<DBInteractionObject> {
+    private func db_loadLocalJson(_ resourceName:String) -> [DBInteractionObject] {
         if let path = Bundle.main.path(forResource: resourceName, ofType: "json") {
             do {
                 let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
@@ -69,10 +69,10 @@ class DBContentManager: NSObject {
         return []
     }
     
-    private func db_mapItems(privateItems: Array<Dictionary<String, Any>>) -> Array<DBInteractionObject> {
+    private func db_mapItems(privateItems: [[String: Any]]) -> [DBInteractionObject] {
         var items:Array<DBInteractionObject> = Array()
         
-        for privateItem:Dictionary<String, Any> in privateItems {
+        for privateItem:[String: Any] in privateItems {
             let item:Item = Item.init(data: privateItem)
             
             switch item.itemType {

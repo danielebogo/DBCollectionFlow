@@ -32,5 +32,8 @@ class DBTableViewTextCell: UITableViewCell {
     
     private func db_buildUI() {
         self.selectionStyle = .none
+        
+        self.cellTextLabel.font = UIFont.db_blockFontWithSize(15.0)
+        self.cellTextLabel.textColor = UIColor.lightGray
     }
 }

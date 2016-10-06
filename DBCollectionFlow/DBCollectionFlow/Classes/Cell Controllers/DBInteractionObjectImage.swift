@@ -10,14 +10,12 @@ import UIKit
 
 
 class DBInteractionObjectImage: DBInteractionObject, DBInteractionObjectProtocol {
+    
     private let itemImages_:[String]
     
     init(itemImages:[String]) {
         itemImages_ = itemImages
     }
-    
-    
-//MARK: Private methods
     
     
 //MARK: DBInteractionObjectProtocol

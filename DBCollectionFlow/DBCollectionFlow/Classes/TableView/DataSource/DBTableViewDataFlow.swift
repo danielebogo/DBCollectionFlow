@@ -12,7 +12,7 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
     
     private let target_: UIViewController
     
-    var items: Array<DBInteractionObject>?
+    var items: [DBInteractionObject]?
     
     init(target:UIViewController) {
         self.target_ = target
@@ -22,7 +22,7 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
         self.db_configureDataSource(Array())
     }
     
-    init(target:UIViewController, data:Array<DBInteractionObject>) {
+    init(target:UIViewController, data:[DBInteractionObject]) {
         self.target_ = target
         
         super.init()
@@ -33,7 +33,7 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
     
 // MARK: Private methods
     
-    private func db_configureDataSource(_ data:Array<DBInteractionObject>) {
+    private func db_configureDataSource(_ data:[DBInteractionObject]) {
         self.items = data
     }
     

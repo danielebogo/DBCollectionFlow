@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         weak var weakSelf = self
         
         let contentManager = DBContentManager()
-        contentManager.loadItemsWithBlock { (items: Array<DBInteractionObject>) in
+        contentManager.loadItemsWithBlock { (items: [DBInteractionObject]) in
             weakSelf?.db_createInteractionObjects(items: items)
         }
     }
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         self.tableView.delegate = self.dataFlow_
     }
     
-    private func db_createInteractionObjects(items: Array<DBInteractionObject>) {
+    private func db_createInteractionObjects(items: [DBInteractionObject]) {
         self.dataFlow_?.items = items
         self.tableView.reloadData()
     }

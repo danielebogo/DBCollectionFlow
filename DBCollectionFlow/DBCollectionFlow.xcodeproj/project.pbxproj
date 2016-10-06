@@ -21,6 +21,8 @@
 		9F18ABDE1D9EB87B00364BD8 /* DBTableViewTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABDC1D9EB87B00364BD8 /* DBTableViewTextCell.swift */; };
 		9F18ABDF1D9EB87B00364BD8 /* DBTableViewTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */; };
 		9F18ABE21D9EB94600364BD8 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */; };
+		9F94EB251DA68A33009C081D /* BLOKKNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F94EB241DA68A33009C081D /* BLOKKNeue-Regular.otf */; };
+		9F94EB271DA68A70009C081D /* UIFont+BlockFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94EB261DA68A70009C081D /* UIFont+BlockFont.swift */; };
 		9FB1F64B1DA3DA8A000C9058 /* DBTableViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F6491DA3DA8A000C9058 /* DBTableViewImageCell.swift */; };
 		9FB1F64C1DA3DA8A000C9058 /* DBTableViewImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1F64A1DA3DA8A000C9058 /* DBTableViewImageCell.xib */; };
 		9FDA8F441DA287C80086908D /* DBContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA8F431DA287C80086908D /* DBContentManager.swift */; };
@@ -46,6 +48,8 @@
 		9F18ABDC1D9EB87B00364BD8 /* DBTableViewTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewTextCell.swift; path = Classes/TableView/Cell/DBTableViewTextCell.swift; sourceTree = "<group>"; };
 		9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DBTableViewTextCell.xib; path = Classes/TableView/Cell/DBTableViewTextCell.xib; sourceTree = "<group>"; };
 		9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Identifier.swift"; path = "Classes/Extensions/UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		9F94EB241DA68A33009C081D /* BLOKKNeue-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BLOKKNeue-Regular.otf"; sourceTree = "<group>"; };
+		9F94EB261DA68A70009C081D /* UIFont+BlockFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+BlockFont.swift"; path = "Classes/Extensions/UIFont+BlockFont.swift"; sourceTree = "<group>"; };
 		9FB1F6491DA3DA8A000C9058 /* DBTableViewImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewImageCell.swift; path = Classes/TableView/Cell/DBTableViewImageCell.swift; sourceTree = "<group>"; };
 		9FB1F64A1DA3DA8A000C9058 /* DBTableViewImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DBTableViewImageCell.xib; path = Classes/TableView/Cell/DBTableViewImageCell.xib; sourceTree = "<group>"; };
 		9FDA8F431DA287C80086908D /* DBContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBContentManager.swift; path = Classes/ContentManager/DBContentManager.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */,
+				9F94EB261DA68A70009C081D /* UIFont+BlockFont.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 		9FFF92E11D9E9EB6005E21F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F94EB241DA68A33009C081D /* BLOKKNeue-Regular.otf */,
 				9F07BD3B1DA546F4000C7658 /* text_items.json */,
 				9FDA8F451DA28E8B0086908D /* items.json */,
 				9FFF92DB1D9E9DCB005E21F5 /* Info.plist */,
@@ -273,6 +279,7 @@
 			files = (
 				9FFF92DA1D9E9DCB005E21F5 /* LaunchScreen.storyboard in Resources */,
 				9FB1F64C1DA3DA8A000C9058 /* DBTableViewImageCell.xib in Resources */,
+				9F94EB251DA68A33009C081D /* BLOKKNeue-Regular.otf in Resources */,
 				9FFF92D71D9E9DCB005E21F5 /* Assets.xcassets in Resources */,
 				9FDA8F461DA28E8B0086908D /* items.json in Resources */,
 				9F16A3551DA3ECE700956158 /* DBTableViewURLCell.xib in Resources */,
@@ -297,6 +304,7 @@
 				9F16A3511DA3ECC400956158 /* DBInteractionObjectURL.swift in Sources */,
 				9F18ABDE1D9EB87B00364BD8 /* DBTableViewTextCell.swift in Sources */,
 				9F16A3491DA3E47A00956158 /* DBInteractionObjectImage.swift in Sources */,
+				9F94EB271DA68A70009C081D /* UIFont+BlockFont.swift in Sources */,
 				9FFF92D01D9E9DCB005E21F5 /* AppDelegate.swift in Sources */,
 				9FDA8F441DA287C80086908D /* DBContentManager.swift in Sources */,
 				9F16A3541DA3ECE700956158 /* DBTableViewURLCell.swift in Sources */,

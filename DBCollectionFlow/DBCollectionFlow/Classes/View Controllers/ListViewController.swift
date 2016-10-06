@@ -23,7 +23,7 @@ class ListViewController: UIViewController {
         weak var weakSelf = self
         
         let contentManager = DBContentManager()
-        contentManager.loadTextItemsWithBlock { (items: Array<DBInteractionObject>) in
+        contentManager.loadTextItemsWithBlock { (items: [DBInteractionObject]) in
             weakSelf?.db_createInteractionObjects(items: items)
         }
     }
@@ -31,7 +31,7 @@ class ListViewController: UIViewController {
 
 //MARK: Private methods
     
-    private func db_createInteractionObjects(items: Array<DBInteractionObject>) {
+    private func db_createInteractionObjects(items: [DBInteractionObject]) {
         self.dataFlow_ = DBTableViewDataFlow(target: self, data: items)
         
         self.tableView.dataSource = self.dataFlow_
