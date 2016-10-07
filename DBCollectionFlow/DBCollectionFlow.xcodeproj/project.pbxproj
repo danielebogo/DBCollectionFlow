@@ -21,6 +21,9 @@
 		9F18ABDE1D9EB87B00364BD8 /* DBTableViewTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABDC1D9EB87B00364BD8 /* DBTableViewTextCell.swift */; };
 		9F18ABDF1D9EB87B00364BD8 /* DBTableViewTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */; };
 		9F18ABE21D9EB94600364BD8 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */; };
+		9F7D69991DA7BB6C0013DF5B /* DBDataAccessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D69981DA7BB6C0013DF5B /* DBDataAccessObject.swift */; };
+		9F7D699B1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D699A1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift */; };
+		9F7D699E1DA7BC410013DF5B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D699D1DA7BC410013DF5B /* Item.swift */; };
 		9F94EB251DA68A33009C081D /* BLOKKNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F94EB241DA68A33009C081D /* BLOKKNeue-Regular.otf */; };
 		9F94EB271DA68A70009C081D /* UIFont+BlockFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94EB261DA68A70009C081D /* UIFont+BlockFont.swift */; };
 		9FB1F64B1DA3DA8A000C9058 /* DBTableViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1F6491DA3DA8A000C9058 /* DBTableViewImageCell.swift */; };
@@ -48,6 +51,9 @@
 		9F18ABDC1D9EB87B00364BD8 /* DBTableViewTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewTextCell.swift; path = Classes/TableView/Cell/DBTableViewTextCell.swift; sourceTree = "<group>"; };
 		9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DBTableViewTextCell.xib; path = Classes/TableView/Cell/DBTableViewTextCell.xib; sourceTree = "<group>"; };
 		9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Identifier.swift"; path = "Classes/Extensions/UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		9F7D69981DA7BB6C0013DF5B /* DBDataAccessObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBDataAccessObject.swift; path = Classes/ContentManager/DAO/DBDataAccessObject.swift; sourceTree = "<group>"; };
+		9F7D699A1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DBDataAccessObject+Items.swift"; path = "Classes/Extensions/DBDataAccessObject+Items.swift"; sourceTree = "<group>"; };
+		9F7D699D1DA7BC410013DF5B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Classes/ContentManager/Model/Item.swift; sourceTree = "<group>"; };
 		9F94EB241DA68A33009C081D /* BLOKKNeue-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BLOKKNeue-Regular.otf"; sourceTree = "<group>"; };
 		9F94EB261DA68A70009C081D /* UIFont+BlockFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+BlockFont.swift"; path = "Classes/Extensions/UIFont+BlockFont.swift"; sourceTree = "<group>"; };
 		9FB1F6491DA3DA8A000C9058 /* DBTableViewImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBTableViewImageCell.swift; path = Classes/TableView/Cell/DBTableViewImageCell.swift; sourceTree = "<group>"; };
@@ -124,8 +130,25 @@
 			children = (
 				9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */,
 				9F94EB261DA68A70009C081D /* UIFont+BlockFont.swift */,
+				9F7D699A1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		9F7D69971DA7BB3B0013DF5B /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				9F7D69981DA7BB6C0013DF5B /* DBDataAccessObject.swift */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		9F7D699C1DA7BC210013DF5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F7D699D1DA7BC410013DF5B /* Item.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		9FB1F6451DA3B92D000C9058 /* Text */ = {
@@ -150,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				9FDA8F431DA287C80086908D /* DBContentManager.swift */,
+				9F7D699C1DA7BC210013DF5B /* Models */,
+				9F7D69971DA7BB3B0013DF5B /* DAO */,
 			);
 			name = ContentManager;
 			sourceTree = "<group>";
@@ -306,8 +331,11 @@
 				9F16A3491DA3E47A00956158 /* DBInteractionObjectImage.swift in Sources */,
 				9F94EB271DA68A70009C081D /* UIFont+BlockFont.swift in Sources */,
 				9FFF92D01D9E9DCB005E21F5 /* AppDelegate.swift in Sources */,
+				9F7D699E1DA7BC410013DF5B /* Item.swift in Sources */,
+				9F7D699B1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift in Sources */,
 				9FDA8F441DA287C80086908D /* DBContentManager.swift in Sources */,
 				9F16A3541DA3ECE700956158 /* DBTableViewURLCell.swift in Sources */,
+				9F7D69991DA7BB6C0013DF5B /* DBDataAccessObject.swift in Sources */,
 				9FB1F64B1DA3DA8A000C9058 /* DBTableViewImageCell.swift in Sources */,
 				9F07BD391DA52C6B000C7658 /* ListViewController.swift in Sources */,
 				9F16A3441DA3E08200956158 /* DBTableView.swift in Sources */,
