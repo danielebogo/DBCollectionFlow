@@ -36,12 +36,12 @@ class DBContentManager: NSObject {
 
 // MARK: Public methods
     
-    public func loadItemsWithBlock(completion: (_ items: [DBInteractionObject]) -> Void) {
+    func loadItemsWithBlock(completion: (_ items: [DBInteractionObject]) -> Void) {
         let items = db_loadLocalJson("items")
         completion(items)
     }
     
-    public func loadTextItemsWithBlock(completion: (_ items: [DBInteractionObject]) -> Void) {
+    func loadTextItemsWithBlock(completion: (_ items: [DBInteractionObject]) -> Void) {
         let items = db_loadLocalJson("text_items")
         completion(items)
     }

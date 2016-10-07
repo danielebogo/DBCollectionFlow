@@ -32,7 +32,7 @@ class DBTableViewImageCell: UITableViewCell {
     
 //MARK: Public methods
     
-    public func setCellImages(_ images:[String]) {
+    func setCellImages(_ images:[String]) {
         var lastY:CGFloat = 0.0
         
         for (index, image) in images.enumerated() {

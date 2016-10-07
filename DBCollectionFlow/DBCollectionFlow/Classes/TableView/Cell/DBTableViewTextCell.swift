@@ -23,7 +23,7 @@ class DBTableViewTextCell: UITableViewCell {
     
 //MARK: Public methods
     
-    public func setCellText(_ text:String) {
+    func setCellText(_ text:String) {
         self.cellTextLabel.text = text
     }
     
