@@ -10,6 +10,6 @@ import UIKit
 
 extension UIFont {
     static func db_blockFontWithSize(_ size:CGFloat) -> UIFont {
-        return UIFont(name: "BLOKKNeue-Regular", size: size)!
+        return UIFont(name:"BLOKKNeue-Regular", size: size)!
     }
 }

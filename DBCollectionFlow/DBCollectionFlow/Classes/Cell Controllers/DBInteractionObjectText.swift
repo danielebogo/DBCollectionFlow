@@ -20,11 +20,11 @@ class DBInteractionObjectText: DBInteractionObject, DBInteractionObjectProtocol 
     
 //MARK: DBInteractionObjectProtocol
     
-    func cellSiseWithTableView(_ target: Any, tableView: UITableView) -> CGFloat {
+    func cellSiseWithTableView(_ tableView: UITableView, target: Any) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
-    func tableView(_ target: Any, tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, target: Any) -> UITableViewCell {
         let cell: DBTableViewTextCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewTextCell.db_cellIdentifier(), for: indexPath) as! DBTableViewTextCell
         cell.setCellText(self.objectText_)
         return cell

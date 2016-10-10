@@ -18,7 +18,7 @@ extension DBDataAccessObject {
 //MARK: Private methods
     
     private func db_loadLocalJson(_ resourceName:String) -> [DBInteractionObject] {
-        if let path = Bundle.main.path(forResource: resourceName, ofType: "json") {
+        if let path = Bundle.main.path(forResource:resourceName, ofType:"json") {
             do {
                 let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
                 if let itemsArray = try? JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as! Array<Dictionary<String, Any>> {

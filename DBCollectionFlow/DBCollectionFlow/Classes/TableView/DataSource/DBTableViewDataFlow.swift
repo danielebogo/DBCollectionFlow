@@ -46,7 +46,7 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let object = self.items![indexPath.row] as! DBInteractionObjectProtocol
-        return object.tableView(self.target_, tableView: tableView, cellForRowAt: indexPath)
+        return object.tableView(tableView, cellForRowAt: indexPath, target: self.target_)
     }
     
     
@@ -54,7 +54,7 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let object = self.items![indexPath.row] as! DBInteractionObjectProtocol
-        return object.cellSiseWithTableView(self.target_, tableView: tableView)
+        return object.cellSiseWithTableView(tableView, target: self.target_)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
