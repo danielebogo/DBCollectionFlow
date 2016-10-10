@@ -12,12 +12,6 @@ extension DBDataAccessObject {
 
     
     func loadItemsForResourceName(_ resourceName:String) -> [DBInteractionObject] {
-        return self.db_loadLocalJson(resourceName)
-    }
-    
-//MARK: Private methods
-    
-    private func db_loadLocalJson(_ resourceName:String) -> [DBInteractionObject] {
         if let path = Bundle.main.path(forResource:resourceName, ofType:"json") {
             do {
                 let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
@@ -35,6 +29,9 @@ extension DBDataAccessObject {
         
         return []
     }
+    
+    
+//MARK: Private methods
     
     private func db_mapItems(privateItems: [[String: Any]]) -> [DBInteractionObject] {
         var items:Array<DBInteractionObject> = Array()
