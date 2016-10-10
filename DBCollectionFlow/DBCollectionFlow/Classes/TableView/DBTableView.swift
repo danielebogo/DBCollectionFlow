@@ -19,6 +19,7 @@ class DBTableView: UITableView {
 
     
 //MARK: Private methods
+    
     private func db_configureUI() {
         let textCellNib = UINib(nibName:"DBTableViewTextCell", bundle: nil)
         let imageCellNib = UINib(nibName:"DBTableViewImageCell", bundle: nil)
