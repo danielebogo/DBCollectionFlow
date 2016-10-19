@@ -24,7 +24,7 @@ class DBInteractionObjectURL: DBInteractionObject, DBInteractionObjectSelectionP
 //MARK: DBInteractionObjectProtocol
     
     func cellSiseWithTableView(_ tableView: UITableView, target: Any) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return 80.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, target: Any) -> UITableViewCell {

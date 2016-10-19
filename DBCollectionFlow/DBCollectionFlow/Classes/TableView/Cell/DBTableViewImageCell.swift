@@ -33,7 +33,7 @@ class DBTableViewImageCell: UITableViewCell {
 //MARK: Public methods
     
     func setCellImages(_ images:[String]) {
-        var lastY:CGFloat = 0.0
+        var lastX:CGFloat = 0.0
         
         for (index, image) in images.enumerated() {
             let newX = Double(index) * Double(self.contentView.bounds.width)
@@ -47,10 +47,10 @@ class DBTableViewImageCell: UITableViewCell {
             imageView.image = UIImage(named: image)
             self.scrollView_.addSubview(imageView)
             
-            lastY = imageView.frame.maxX
+            lastX = imageView.frame.maxX
         }
         
-        self.scrollView_.contentSize = CGSize(width: lastY, height: self.contentView.bounds.height)
+        self.scrollView_.contentSize = CGSize(width: lastX, height: self.contentView.bounds.height)
     }
     
     
@@ -58,6 +58,8 @@ class DBTableViewImageCell: UITableViewCell {
     
     private func db_buildUI() {
         self.selectionStyle = .none
+        
+        self.setNeedsUpdateConstraints()
     }
 
 }

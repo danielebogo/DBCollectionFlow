@@ -12,6 +12,7 @@ import UIKit
 class DBInteractionObjectImage: DBInteractionObject, DBInteractionObjectProtocol {
     
     private let itemImages_:[String]
+    private var lastCell: DBTableViewImageCell?
     
     init(itemImages:[String]) {
         itemImages_ = itemImages

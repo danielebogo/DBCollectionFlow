@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MhU-9Y-r1r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mhu-LA-9ME">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -15,46 +15,53 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4vJ-I0-kgb" customClass="DBTableView" customModule="DBCollectionFlow" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlD-GN-pbl">
-                                <color key="backgroundColor" red="0.93731737140000004" green="0.93728923799999997" blue="0.93730515240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="oFV-sh-uG6"/>
-                                </constraints>
-                                <state key="normal" title="OPEN TEXT LIST">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="SQ7-AL-Ecn" kind="show" id="9AQ-cr-rhO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IlD-GN-pbl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Av3-pI-TxP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4vJ-I0-kgb" secondAttribute="bottom" id="BKt-E1-HBe"/>
-                            <constraint firstAttribute="trailing" secondItem="IlD-GN-pbl" secondAttribute="trailing" id="JF9-dk-T4P"/>
                             <constraint firstItem="4vJ-I0-kgb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JS7-jP-Qnu"/>
                             <constraint firstAttribute="trailing" secondItem="4vJ-I0-kgb" secondAttribute="trailing" id="Zj9-fd-49S"/>
-                            <constraint firstItem="IlD-GN-pbl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eFW-pv-lyj"/>
-                            <constraint firstItem="4vJ-I0-kgb" firstAttribute="top" secondItem="IlD-GN-pbl" secondAttribute="bottom" id="fhM-jT-AO0"/>
+                            <constraint firstItem="4vJ-I0-kgb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xiX-Zq-XAV"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Mix Table View" id="dfz-D7-Zvo"/>
+                    <navigationItem key="navigationItem" title="Mix Table" id="dfz-D7-Zvo"/>
                     <connections>
                         <outlet property="tableView" destination="4vJ-I0-kgb" id="QUI-MM-pFt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-759.20000000000005" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-802" y="-923"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l8h-AT-hzD">
+            <objects>
+                <navigationController id="TbI-tD-22x" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="iconText" id="p1g-Ng-eII">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Pgw-Xq-VG8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SQ7-AL-Ecn" kind="relationship" relationship="rootViewController" id="cm3-xU-yhy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Giu-tD-SlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1679" y="-234"/>
         </scene>
         <!--Text List-->
         <scene sceneID="MVc-6u-FX1">
@@ -65,10 +72,10 @@
                         <viewControllerLayoutGuide type="bottom" id="IRf-Ng-NUl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ETJ-NS-XgN">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-5p-OX4" customClass="DBTableView" customModule="DBCollectionFlow" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-5p-OX4" customClass="DBTableView" customModule="DBCollectionFlow" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections/>
                             </tableView>
@@ -82,22 +89,49 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Text Table" id="OIj-3K-b2o"/>
                     <connections>
                         <outlet property="tableView" destination="QQr-5p-OX4" id="eKH-E1-CeS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXV-C8-8lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="123"/>
+            <point key="canvasLocation" x="-802" y="-234"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dEd-SM-3bk">
+            <objects>
+                <tabBarController id="mhu-LA-9ME" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="KWX-LP-idx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MhU-9Y-r1r" kind="relationship" relationship="viewControllers" id="epX-g0-1md"/>
+                        <segue destination="TbI-tD-22x" kind="relationship" relationship="viewControllers" id="fEm-s7-W29"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agx-fn-9hb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2756" y="-614"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bv9-tu-Vow">
             <objects>
                 <navigationController id="MhU-9Y-r1r" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bXB-Jx-bKM">
+                    <tabBarItem key="tabBarItem" title="" image="iconShuffle" id="yVj-16-GKM">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="bXB-Jx-bKM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HdQ-XA-cwG"/>
@@ -105,7 +139,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2MP-Wk-PAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1559" y="123"/>
+            <point key="canvasLocation" x="-1678" y="-923"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconShuffle" width="44" height="44"/>
+        <image name="iconText" width="44" height="44"/>
+    </resources>
 </document>

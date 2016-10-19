@@ -24,7 +24,7 @@ class DBTableViewURLCell: UITableViewCell {
 //MARK: Public methods
     
     func setCellText(_ text:String) {
-        self.cellLabelText.text = text
+        self.cellLabelText.text = text.capitalized
     }
     
     

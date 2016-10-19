@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -16,16 +16,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96X-jN-Mf6">
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="96X-jN-Mf6" secondAttribute="bottom" constant="10" id="PxA-3C-mgb"/>
-                    <constraint firstAttribute="trailing" secondItem="96X-jN-Mf6" secondAttribute="trailing" constant="10" id="bla-RT-fFz"/>
-                    <constraint firstItem="96X-jN-Mf6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ifE-6B-sP4"/>
-                    <constraint firstItem="96X-jN-Mf6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rtY-4P-TeH"/>
+                    <constraint firstAttribute="bottom" secondItem="96X-jN-Mf6" secondAttribute="bottom" constant="15" id="PxA-3C-mgb"/>
+                    <constraint firstAttribute="trailing" secondItem="96X-jN-Mf6" secondAttribute="trailing" constant="15" id="bla-RT-fFz"/>
+                    <constraint firstItem="96X-jN-Mf6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ifE-6B-sP4"/>
+                    <constraint firstItem="96X-jN-Mf6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rtY-4P-TeH"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
