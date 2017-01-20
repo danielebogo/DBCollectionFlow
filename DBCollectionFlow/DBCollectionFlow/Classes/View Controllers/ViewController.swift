@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         weak var weakSelf = self
         
         let contentManager = DBContentManager()
-        contentManager.loadItemsWithBlock { (items: [DBInteractionObject]) in
-            weakSelf?.db_createInteractionObjects(items: items)
+        contentManager.loadItemsWithBlock {
+            weakSelf?.db_createInteractionObjects(items: $0)
         }
     }
 
