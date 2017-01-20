@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITableViewCell {
-    static func db_cellIdentifier() -> String {
+    class var db_cellIdentifier:String {
         return "k\(NSStringFromClass(self))Identifier"
     }
 }

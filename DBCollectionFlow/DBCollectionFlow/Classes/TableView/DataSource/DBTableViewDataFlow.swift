@@ -19,7 +19,7 @@ class DBTableViewDataFlow: NSObject, UITableViewDelegate, UITableViewDataSource 
         
         super.init()
         
-        self.db_configureDataSource(Array())
+        self.db_configureDataSource([])
     }
     
     init(target:UIViewController, data:[DBInteractionObject]) {

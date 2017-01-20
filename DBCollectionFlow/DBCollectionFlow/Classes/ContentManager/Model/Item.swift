@@ -10,9 +10,9 @@ import Foundation
 
 
 enum ItemType: Int {
-    case Text = 0
-    case Image
-    case URL
+    case text
+    case image
+    case url
 }
 
 struct Item {
@@ -22,9 +22,9 @@ struct Item {
     let itemURL:String?
     let itemURLTitle:String?
     
-    init(data:Dictionary<String, Any>) {
+    init(data:[String:AnyObject]) {
         itemText = data["item_text"] as? String
-        itemType = ItemType.init(rawValue: data["item_type"] as! Int)!
+        itemType = ItemType(rawValue: data["item_type"] as! Int)!
         itemImages = data["item_images"] as? [String]
         itemURL = data["item_URL"] as? String
         itemURLTitle = data["item_URL_title"] as? String

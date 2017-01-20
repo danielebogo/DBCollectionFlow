@@ -25,9 +25,9 @@ class DBTableView: UITableView {
         let imageCellNib = UINib(nibName:"DBTableViewImageCell", bundle: nil)
         let urlCellNib = UINib(nibName:"DBTableViewURLCell", bundle: nil)
         
-        self.register(textCellNib, forCellReuseIdentifier: DBTableViewTextCell.db_cellIdentifier())
-        self.register(imageCellNib, forCellReuseIdentifier: DBTableViewImageCell.db_cellIdentifier())
-        self.register(urlCellNib, forCellReuseIdentifier: DBTableViewURLCell.db_cellIdentifier())
+        self.register(textCellNib, forCellReuseIdentifier: DBTableViewTextCell.db_cellIdentifier)
+        self.register(imageCellNib, forCellReuseIdentifier: DBTableViewImageCell.db_cellIdentifier)
+        self.register(urlCellNib, forCellReuseIdentifier: DBTableViewURLCell.db_cellIdentifier)
         
         self.estimatedRowHeight = 44.0
         self.rowHeight = UITableViewAutomaticDimension

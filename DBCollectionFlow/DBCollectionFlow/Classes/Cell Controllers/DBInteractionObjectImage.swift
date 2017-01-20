@@ -12,7 +12,6 @@ import UIKit
 class DBInteractionObjectImage: DBInteractionObject, DBInteractionObjectProtocol {
     
     private let itemImages_:[String]
-    private var lastCell: DBTableViewImageCell?
     
     init(itemImages:[String]) {
         itemImages_ = itemImages
@@ -21,12 +20,12 @@ class DBInteractionObjectImage: DBInteractionObject, DBInteractionObjectProtocol
     
 //MARK: DBInteractionObjectProtocol
     
-    func cellSiseWithTableView(_ tableView: UITableView, target: Any) -> CGFloat {
+    func cellSiseWithTableView(_ tableView: UITableView, target: AnyObject) -> CGFloat {
         return tableView.frame.width
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, target: Any) -> UITableViewCell {
-        let cell: DBTableViewImageCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewImageCell.db_cellIdentifier(), for: indexPath) as! DBTableViewImageCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, target: AnyObject) -> UITableViewCell {
+        let cell: DBTableViewImageCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewImageCell.db_cellIdentifier, for: indexPath) as! DBTableViewImageCell
         cell.setCellImages(self.itemImages_)
         return cell
     }

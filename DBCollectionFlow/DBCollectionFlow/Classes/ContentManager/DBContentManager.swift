@@ -24,11 +24,9 @@ class DBContentManager: NSObject {
 // MARK: Public methods
     
     func loadItemsWithBlock(completion: (_ items: [DBInteractionObject]) -> Void) {
-        let items = self.dataAccessObject.loadItemsForResourceName("items")
-        completion(items)
+        completion(self.dataAccessObject.loadItemsForResourceName("items"))
     }
     
     func loadTextItemsWithBlock(completion: (_ items: [DBInteractionObject]) -> Void) {
-        let items = self.dataAccessObject.loadItemsForResourceName("text_items")
-        completion(items)
+        completion(self.dataAccessObject.loadItemsForResourceName("text_items"))
     }}

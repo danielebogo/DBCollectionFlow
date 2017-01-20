@@ -23,17 +23,17 @@ class DBInteractionObjectURL: DBInteractionObject, DBInteractionObjectSelectionP
     
 //MARK: DBInteractionObjectProtocol
     
-    func cellSiseWithTableView(_ tableView: UITableView, target: Any) -> CGFloat {
+    func cellSiseWithTableView(_ tableView: UITableView, target: AnyObject) -> CGFloat {
         return 80.0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, target: Any) -> UITableViewCell {
-        let cell: DBTableViewURLCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewURLCell.db_cellIdentifier(), for: indexPath) as! DBTableViewURLCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, target: AnyObject) -> UITableViewCell {
+        let cell: DBTableViewURLCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewURLCell.db_cellIdentifier, for: indexPath) as! DBTableViewURLCell
         cell.setCellText(self.objectURLTitle_)
         return cell
     }
 
-    func target(_ target: Any, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func target(_ target: AnyObject, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let objectURL:URL = URL(string: objectURL_)!
         let vc = SFSafariViewController(url: objectURL, entersReaderIfAvailable: true)
         (target as! UIViewController).present(vc, animated: true, completion: nil)
