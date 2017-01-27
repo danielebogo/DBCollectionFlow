@@ -8,26 +8,44 @@
 
 import UIKit
 
+
+enum DBDataAccessObjectResponse {
+    static let errorMessageKey:String = "DBErrorMessageKey"
+    
+    case success(items:[DBInteractionObject])
+    case error(error:NSError)
+}
+
+extension NSError {
+    var errorMessage:String {
+        switch self.code {
+        case 404:
+            return "Invalid filename/path."
+        case 406:
+            return "Could not get json from file, make sure that file contains valid json."
+        default:
+            return self.localizedDescription
+        }
+    }
+}
+
 extension DBDataAccessObject {
 
-    
-    func loadItemsForResourceName(_ resourceName:String) -> [DBInteractionObject] {
+    func loadItemsForResourceName(_ resourceName:String) -> DBDataAccessObjectResponse {
         if let path = Bundle.main.path(forResource:resourceName, ofType:"json") {
             do {
                 let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
                 if let itemsArray = try? JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as! [[String:AnyObject]] {
-                    return self.db_mapItems(privateItems: itemsArray)
+                    return .success(items: self.db_mapItems(privateItems: itemsArray))
                 } else {
-                    print("Could not get json from file, make sure that file contains valid json.")
+                    return .error(error: NSError(domain: "com.bogodaniele.invalid.json", code: 406, userInfo: nil))
                 }
             } catch let error as NSError {
-                print(error.localizedDescription)
+                return .error(error: error)
             }
-        } else {
-            print("Invalid filename/path.")
         }
         
-        return []
+        return .error(error: NSError(domain: "com.bogodaniele.invalid.filename.or.path", code: 404, userInfo: nil))
     }
     
     

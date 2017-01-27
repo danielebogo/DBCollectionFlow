@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: DBTableView!
     
-    private var dataFlow_: DBTableViewDataFlow?
+    private var _dataFlow: DBTableViewDataFlow?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +21,16 @@ class ViewController: UIViewController {
         
         self.db_configureUI()
         
-        weak var weakSelf = self
-        
         let contentManager = DBContentManager()
-        contentManager.loadItemsWithBlock {
-            weakSelf?.db_createInteractionObjects(items: $0)
+        contentManager.loadItemsWithBlock { [weak self] (response: DBDataAccessObjectResponse) in
+            switch response {
+            case .success(let items):
+                self?.db_createInteractionObjects(items: items)
+                break
+                
+            case .error(let error):
+                print("Error: \(error.errorMessage)")
+            }
         }
     }
 
@@ -33,14 +38,14 @@ class ViewController: UIViewController {
 // MARK: Private methods
     
     private func db_configureUI() {
-        self.dataFlow_ = DBTableViewDataFlow(target: self)
+        self._dataFlow = DBTableViewDataFlow(target: self)
         
-        self.tableView.dataSource = self.dataFlow_
-        self.tableView.delegate = self.dataFlow_
+        self.tableView.dataSource = self._dataFlow
+        self.tableView.delegate = self._dataFlow
     }
     
     private func db_createInteractionObjects(items: [DBInteractionObject]) {
-        self.dataFlow_?.items = items
+        self._dataFlow?.items = items
         self.tableView.reloadData()
     }
 }

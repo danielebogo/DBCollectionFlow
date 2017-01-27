@@ -12,12 +12,12 @@ import SafariServices
 
 class DBInteractionObjectURL: DBInteractionObject, DBInteractionObjectSelectionProtocol {
 
-    private let objectURL_:String
-    private let objectURLTitle_:String
+    private let _objectURL:String
+    private let _objectURLTitle:String
     
     init(URL:String, title:String) {
-        objectURL_ = URL
-        objectURLTitle_ = title
+        self._objectURL = URL
+        self._objectURLTitle = title
     }
     
     
@@ -29,12 +29,12 @@ class DBInteractionObjectURL: DBInteractionObject, DBInteractionObjectSelectionP
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, target: AnyObject) -> UITableViewCell {
         let cell: DBTableViewURLCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewURLCell.db_cellIdentifier, for: indexPath) as! DBTableViewURLCell
-        cell.setCellText(self.objectURLTitle_)
+        cell.setCellText(self._objectURLTitle)
         return cell
     }
 
     func target(_ target: AnyObject, tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let objectURL:URL = URL(string: objectURL_)!
+        let objectURL:URL = URL(string: self._objectURL)!
         let vc = SFSafariViewController(url: objectURL, entersReaderIfAvailable: true)
         (target as! UIViewController).present(vc, animated: true, completion: nil)
     }

@@ -9,16 +9,14 @@
 import UIKit
 
 
-typealias LoadItemsCompletionBlock = (_ items: [DBInteractionObject]) -> Void
+typealias LoadItemsCompletionBlock = (_ response: DBDataAccessObjectResponse) -> Void
 
 class DBContentManager: NSObject {
     
-    private let dataAccessObject:DBDataAccessObject
-
+    private let _dataAccessObject:DBDataAccessObject
     
     override init() {
-        self.dataAccessObject = DBDataAccessObject()
-        
+        self._dataAccessObject = DBDataAccessObject()
         super.init()
     }
     
@@ -26,10 +24,10 @@ class DBContentManager: NSObject {
 // MARK: Public methods
     
     func loadItemsWithBlock(completion:LoadItemsCompletionBlock) {
-        completion(self.dataAccessObject.loadItemsForResourceName("items"))
+        completion(self._dataAccessObject.loadItemsForResourceName("items"))
     }
     
     func loadTextItemsWithBlock(completion:LoadItemsCompletionBlock) {
-        completion(self.dataAccessObject.loadItemsForResourceName("text_items"))
+        completion(self._dataAccessObject.loadItemsForResourceName("text_items"))
     }
 }

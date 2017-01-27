@@ -11,10 +11,10 @@ import UIKit
 
 class DBInteractionObjectText: DBInteractionObject, DBInteractionObjectProtocol {
     
-    private let objectText_:String
+    private let _objectText:String
     
     init(text:String) {
-        objectText_ = text
+        self._objectText = text
     }
     
     
@@ -26,7 +26,7 @@ class DBInteractionObjectText: DBInteractionObject, DBInteractionObjectProtocol 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, target: AnyObject) -> UITableViewCell {
         let cell: DBTableViewTextCell = tableView.dequeueReusableCell(withIdentifier: DBTableViewTextCell.db_cellIdentifier, for: indexPath) as! DBTableViewTextCell
-        cell.setCellText(self.objectText_)
+        cell.setCellText(self._objectText)
         return cell
     }
 }

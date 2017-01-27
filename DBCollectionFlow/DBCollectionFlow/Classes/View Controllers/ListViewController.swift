@@ -13,17 +13,22 @@ class ListViewController: UIViewController {
 
     @IBOutlet weak private var tableView: DBTableView!
     
-    private var dataFlow_: DBTableViewDataFlow?
+    private var _dataFlow: DBTableViewDataFlow?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        weak var weakSelf = self
-        
         let contentManager = DBContentManager()
-        contentManager.loadTextItemsWithBlock { (items: [DBInteractionObject]) in
-            weakSelf?.db_createInteractionObjects(items: items)
+        contentManager.loadTextItemsWithBlock { [weak self] (response: DBDataAccessObjectResponse) in
+            switch response {
+            case .success(let items):
+                self?.db_createInteractionObjects(items: items)
+                break
+                
+            case .error(let error):
+                print("Error: \(error.errorMessage)")
+            }
         }
     }
 
@@ -31,10 +36,10 @@ class ListViewController: UIViewController {
 //MARK: Private methods
     
     private func db_createInteractionObjects(items: [DBInteractionObject]) {
-        self.dataFlow_ = DBTableViewDataFlow(target: self, data: items)
+        self._dataFlow = DBTableViewDataFlow(target: self, data: items)
         
-        self.tableView.dataSource = self.dataFlow_
-        self.tableView.delegate = self.dataFlow_
+        self.tableView.dataSource = self._dataFlow
+        self.tableView.delegate = self._dataFlow
 
     }
 }
