@@ -22,7 +22,7 @@
 		9F18ABDF1D9EB87B00364BD8 /* DBTableViewTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */; };
 		9F18ABE21D9EB94600364BD8 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */; };
 		9F7D69991DA7BB6C0013DF5B /* DBDataAccessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D69981DA7BB6C0013DF5B /* DBDataAccessObject.swift */; };
-		9F7D699B1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D699A1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift */; };
+		9F7D699B1DA7BB8F0013DF5B /* NSError+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D699A1DA7BB8F0013DF5B /* NSError+Message.swift */; };
 		9F7D699E1DA7BC410013DF5B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D699D1DA7BC410013DF5B /* Item.swift */; };
 		9F94EB251DA68A33009C081D /* BLOKKNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F94EB241DA68A33009C081D /* BLOKKNeue-Regular.otf */; };
 		9F94EB271DA68A70009C081D /* UIFont+BlockFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94EB261DA68A70009C081D /* UIFont+BlockFont.swift */; };
@@ -52,7 +52,7 @@
 		9F18ABDD1D9EB87B00364BD8 /* DBTableViewTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DBTableViewTextCell.xib; path = Classes/TableView/Cell/DBTableViewTextCell.xib; sourceTree = "<group>"; };
 		9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Identifier.swift"; path = "Classes/Extensions/UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		9F7D69981DA7BB6C0013DF5B /* DBDataAccessObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBDataAccessObject.swift; path = Classes/ContentManager/DAO/DBDataAccessObject.swift; sourceTree = "<group>"; };
-		9F7D699A1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DBDataAccessObject+Items.swift"; path = "Classes/Extensions/DBDataAccessObject+Items.swift"; sourceTree = "<group>"; };
+		9F7D699A1DA7BB8F0013DF5B /* NSError+Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSError+Message.swift"; path = "Classes/Extensions/NSError+Message.swift"; sourceTree = "<group>"; };
 		9F7D699D1DA7BC410013DF5B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Classes/ContentManager/Model/Item.swift; sourceTree = "<group>"; };
 		9F94EB241DA68A33009C081D /* BLOKKNeue-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BLOKKNeue-Regular.otf"; sourceTree = "<group>"; };
 		9F94EB261DA68A70009C081D /* UIFont+BlockFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+BlockFont.swift"; path = "Classes/Extensions/UIFont+BlockFont.swift"; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			children = (
 				9F18ABE11D9EB94600364BD8 /* UITableViewCell+Identifier.swift */,
 				9F94EB261DA68A70009C081D /* UIFont+BlockFont.swift */,
-				9F7D699A1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift */,
+				9F7D699A1DA7BB8F0013DF5B /* NSError+Message.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				9F94EB271DA68A70009C081D /* UIFont+BlockFont.swift in Sources */,
 				9FFF92D01D9E9DCB005E21F5 /* AppDelegate.swift in Sources */,
 				9F7D699E1DA7BC410013DF5B /* Item.swift in Sources */,
-				9F7D699B1DA7BB8F0013DF5B /* DBDataAccessObject+Items.swift in Sources */,
+				9F7D699B1DA7BB8F0013DF5B /* NSError+Message.swift in Sources */,
 				9FDA8F441DA287C80086908D /* DBContentManager.swift in Sources */,
 				9F16A3541DA3ECE700956158 /* DBTableViewURLCell.swift in Sources */,
 				9F7D69991DA7BB6C0013DF5B /* DBDataAccessObject.swift in Sources */,
