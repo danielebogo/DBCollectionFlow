@@ -10,8 +10,6 @@ import UIKit
 
 
 enum DBDataAccessObjectResponse {
-    static let errorMessageKey:String = "DBErrorMessageKey"
-    
     case success(items:[DBInteractionObject])
     case error(error:NSError)
 }
